@@ -1,0 +1,29 @@
+# PhantomStrikes - Security Research Toolkit
+# Python Dependencies
+
+# Core dependencies
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Network and security
+PySocks>=1.7.1
+cryptography>=3.4.8
+
+# Terminal and UI
+colorama>=0.4.5
+rich>=12.0.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=4.0.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Optional dependencies
+# tor-browser-selenium>=0.4.0  # For Tor integration
+# beautifulsoup4>=4.11.0       # For web scraping
+# lxml>=4.9.0                  # XML/HTML processing 

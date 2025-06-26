@@ -1,0 +1,63 @@
+# PhantomStrikes - Security Research Toolkit
+# Docker Compose configuration
+
+version: '3.8'
+
+services:
+  phantomstrikes:
+    build: .
+    container_name: phantomstrikes-app
+    ports:
+      - "8080:8080"
+      - "9150:9150"
+    volumes:
+      - ./data:/app/data
+      - ./web/.server/www:/app/web/.server/www
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TOR_ENABLED=false
+    restart: unless-stopped
+    networks:
+      - phantomstrikes-network
+
+  # Optional: Tor service for anonymization
+  tor:
+    image: dperson/torproxy
+    container_name: phantomstrikes-tor
+    ports:
+      - "9050:9050"
+      - "9051:9051"
+    volumes:
+      - ./tor-config:/etc/tor
+    restart: unless-stopped
+    networks:
+      - phantomstrikes-network
+    profiles:
+      - tor
+
+  # Optional: Web server for phishing simulation
+  web-server:
+    build: .
+    container_name: phantomstrikes-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./web/.server/www:/var/www/html
+      - ./web/.sites:/var/www/sites
+    environment:
+      - PHP_ENABLED=true
+    command: php -S 0.0.0.0:80 -t /var/www/html
+    restart: unless-stopped
+    networks:
+      - phantomstrikes-network
+    profiles:
+      - web
+
+networks:
+  phantomstrikes-network:
+    driver: bridge
+
+volumes:
+  tor-config:
+    driver: local 
