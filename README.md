@@ -326,32 +326,6 @@ python src/phantomstrikes.py \
 - **Concurrent Users**: Support for 100+ simultaneous connections
 - **Uptime**: 99.9% availability with proper configuration
 
-## 🤝 Contributing
-
-We welcome contributions from the security community! Please follow these guidelines:
-
-### Development Setup
-```bash
-# Fork and clone
-git clone https://github.com/yourusername/PhantomStrikes.git
-cd PhantomStrikes
-
-# Create feature branch
-git checkout -b feature/amazing-feature
-
-# Make changes and test
-python -m pytest tests/
-
-# Commit and push
-git commit -m "Add amazing feature"
-git push origin feature/amazing-feature
-```
-
-### Contribution Guidelines
-1. **Code Quality**: Follow PEP 8 standards
-2. **Documentation**: Update README and docstrings
-3. **Testing**: Include unit tests for new features
-4. **Security**: Ensure no vulnerabilities are introduced
 
 ## 📄 License
 
@@ -363,30 +337,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 This software is developed and distributed for **educational purposes only**. The authors and contributors are not responsible for any misuse of this software.
 
-### Legal Compliance
-- Use only on systems you own or have explicit permission to test
-- Comply with all applicable laws and regulations
-- Respect privacy and data protection requirements
-- Follow ethical hacking guidelines
-
-### Responsible Usage
-- **Security Research**: Academic and professional security testing
-- **Penetration Testing**: Authorized security assessments
-- **Educational Training**: Security awareness and training programs
-- **Defense Development**: Understanding attacks to build better defenses
-
-## 📞 Support
-
-### Getting Help
-- **Documentation**: Check the [docs/](docs/) directory
-- **Issues**: Report bugs via GitHub Issues
-- **Discussions**: Join our community discussions
-
-### Contact Information
-- **Project Maintainer**: [Your Name](mailto:your.email@example.com)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
-
 ## 📚 Additional Documentation
 
 For detailed documentation, see the [docs/](docs/) directory:
@@ -397,13 +347,3 @@ For detailed documentation, see the [docs/](docs/) directory:
 - [Security Best Practices](docs/security.md) - Security guidelines and best practices
 
 ---
-
-<div align="center">
-
-**Made with ❤️ for the Security Community**
-
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/PhantomStrikes?style=social)](https://github.com/yourusername/PhantomStrikes)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/PhantomStrikes?style=social)](https://github.com/yourusername/PhantomStrikes)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/PhantomStrikes)](https://github.com/yourusername/PhantomStrikes/issues)
-
-</div> 
